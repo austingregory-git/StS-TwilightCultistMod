@@ -1,0 +1,19 @@
+{
+  "TwilightCultist:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "TwilightCultist:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL twilightcultist:Multiword_Keyword."
+  },
+  "TwilightCultist:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! twilightcultist:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! twilightcultist:Keywords."
+  },
+  "TwilightCultist:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  }
+}
