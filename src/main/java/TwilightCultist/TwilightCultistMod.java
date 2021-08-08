@@ -1,5 +1,6 @@
 package TwilightCultist;
 
+import TwilightCultist.relics.TwilightMedallion;
 import basemod.*;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -381,7 +382,8 @@ public class TwilightCultistMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TwilightCultist.Enums.COLOR_GRAY);
+        System.out.println(makeRelicPath("AlchemistsNecklace.png"));
+        BaseMod.addRelicToCustomPool(new TwilightMedallion(), TwilightCultist.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TwilightCultist.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TwilightCultist.Enums.COLOR_GRAY);
         

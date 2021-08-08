@@ -1,5 +1,9 @@
 package TwilightCultist.characters;
 
+import TwilightCultist.cards.TwilightCultist_Defend;
+import TwilightCultist.cards.TwilightCultist_MagicStrike;
+import TwilightCultist.cards.TwilightCultist_Strike;
+import TwilightCultist.relics.TwilightMedallion;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -153,7 +157,16 @@ public class TwilightCultist extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        //retVal.add(DefaultCommonAttack.ID);
+        retVal.add(TwilightCultist_Strike.ID);
+        retVal.add(TwilightCultist_Strike.ID);
+        retVal.add(TwilightCultist_Strike.ID);
+        retVal.add(TwilightCultist_MagicStrike.ID);
+        retVal.add(TwilightCultist_MagicStrike.ID);
+        retVal.add(TwilightCultist_MagicStrike.ID);
+        retVal.add(TwilightCultist_Defend.ID);
+        retVal.add(TwilightCultist_Defend.ID);
+        retVal.add(TwilightCultist_Defend.ID);
+        retVal.add(TwilightCultist_Defend.ID);
 
         return retVal;
     }
@@ -162,7 +175,7 @@ public class TwilightCultist extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        //retVal.add(PlaceholderRelic.ID);
+        retVal.add(TwilightMedallion.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game

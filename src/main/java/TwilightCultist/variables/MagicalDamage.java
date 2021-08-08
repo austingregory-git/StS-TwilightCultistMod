@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import static TwilightCultist.TwilightCultistMod.makeID;
 
-public class SecondMagicNumber extends DynamicVariable {
+public class MagicalDamage extends DynamicVariable {
 
     //For in-depth comments, check the other variable(DefaultCustomVariable). It's nearly identical.
 
     @Override
     public String key() {
-        return makeID("SecondMagic");
+        return makeID("MagicDamage");
         // This is what you put between "!!" in your card strings to actually display the number.
         // You can name this anything (no spaces), but please pre-phase it with your mod name as otherwise mod conflicts can occur.
         // Remember, we're using makeID so it automatically puts "TwilightCultist:" (or, your id) before the name.
@@ -20,22 +20,22 @@ public class SecondMagicNumber extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
-        return ((AbstractTwilightCultistCard) card).isSecondMagicNumberModified;
+        return ((AbstractTwilightCultistCard) card).isMagicalDamageModified;
 
     }
 
     @Override
     public int value(AbstractCard card) {
-        return ((AbstractTwilightCultistCard) card).secondMagicNumber;
+        return ((AbstractTwilightCultistCard) card).magicalDamage;
     }
 
     @Override
     public int baseValue(AbstractCard card) {
-        return ((AbstractTwilightCultistCard) card).secondMagicNumber;
+        return ((AbstractTwilightCultistCard) card).magicalDamage;
     }
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return ((AbstractTwilightCultistCard) card).upgradedSecondMagicNumber;
+        return ((AbstractTwilightCultistCard) card).upgradedMagicalDamage;
     }
 }

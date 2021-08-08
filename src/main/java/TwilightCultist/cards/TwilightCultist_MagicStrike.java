@@ -1,24 +1,22 @@
 package TwilightCultist.cards;
 
 import TwilightCultist.TwilightCultistMod;
-import basemod.AutoAdd;
+import TwilightCultist.characters.TwilightCultist;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import TwilightCultist.characters.TwilightCultist;
 
 import static TwilightCultist.TwilightCultistMod.makeCardPath;
 
 
-public class TwilightCultist_Strike extends AbstractDynamicCard {
+public class TwilightCultist_MagicStrike extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TwilightCultistMod.makeID(TwilightCultist_Strike.class.getSimpleName());
+    public static final String ID = TwilightCultistMod.makeID(TwilightCultist_MagicStrike.class.getSimpleName());
     //public static final String IMG = TwilightCultistMod.imgFromId(ID);
     public static final String IMG = makeCardPath("Attack.png");;
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
@@ -43,9 +41,9 @@ public class TwilightCultist_Strike extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public TwilightCultist_Strike() { // public TwilightCultist_Strike() - This one and the one right under the imports are the most important ones, don't forget them
+    public TwilightCultist_MagicStrike() { // public TwilightCultist_Strike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        baseMagicalDamage = DAMAGE;
     }
 
 
@@ -53,7 +51,7 @@ public class TwilightCultist_Strike extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new DamageAction(m, new DamageInfo(p, magicalDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
 

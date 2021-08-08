@@ -20,7 +20,8 @@ public class TwilightCultist_Defend extends AbstractDynamicCard {
 
 
     public static final String ID = TwilightCultistMod.makeID(TwilightCultist_Defend.class.getSimpleName());
-    public static final String IMG = TwilightCultistMod.imgFromId(ID);
+    //public static final String IMG = TwilightCultistMod.imgFromId(ID);
+    public static final String IMG = makeCardPath("Attack.png");;
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
 

@@ -13,8 +13,12 @@ public abstract class AbstractTwilightCultistCard extends CustomCard {
 
     public int secondMagicNumber;        // Just like magic number, or any number for that matter, we want our regular, modifiable stat
     public int baseSecondMagicNumber;    // And our base stat - the number in it's base state. It will reset to that by default.
+    public int magicalDamage;    // And our base stat - the number in it's base state. It will reset to that by default.
+    public int baseMagicalDamage;    // And our base stat - the number in it's base state. It will reset to that by default.
     public boolean upgradedSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
+    public boolean isMagicalDamageModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
+    public boolean upgradedMagicalDamage; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
     public AbstractTwilightCultistCard(final String id,
                                        final String name,
@@ -35,6 +39,7 @@ public abstract class AbstractTwilightCultistCard extends CustomCard {
         isBlockModified = false;
         isMagicNumberModified = false;
         isSecondMagicNumberModified = false;
+        isMagicalDamageModified = false;
     }
 
     public void displayUpgrades() { // Display the upgrade - when you click a card to upgrade it
@@ -42,6 +47,10 @@ public abstract class AbstractTwilightCultistCard extends CustomCard {
         if (upgradedSecondMagicNumber) { // If we set upgradedDefaultSecondMagicNumber = true in our card.
             secondMagicNumber = baseSecondMagicNumber; // Show how the number changes, as out of combat, the base number of a card is shown.
             isSecondMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
+        }
+        if (upgradedMagicalDamage) { // If we set upgradedDefaultSecondMagicNumber = true in our card.
+            magicalDamage = baseMagicalDamage; // Show how the number changes, as out of combat, the base number of a card is shown.
+            isMagicalDamageModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
 
     }
